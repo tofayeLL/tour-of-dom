@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Of Dom</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .fruits-container li {
+            color: tomato;
+        }
+
+        #fruits-title {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome To My Dom</h1>
+    </header>
+    <main>
+        <section>
+            <h1>My Awesome Dom De Baba</h1>
+            <ul>
+                <li>jalali set</li>
+                <li>shafayet</li>
+                <li>bonobush</li>
+                <li>dom de re baba</li>
+            </ul>
+        </section>
+
+        <section class="fruits-container">
+            <h1 id="fruits-title" class="some-class more-class use-class">Fruits I like</h1>
+            <ul>
+                <li>apple</li>
+                <li>orange</li>
+                <li>mango</li>
+                <li>guava</li>
+            </ul>
+        </section>
+        <section id="places-container" class="large-text">
+            <h1 id="places-title">Place I like to visit</h1>
+            <ul>
+                <li class="important-places">sundorban</li>
+                <li class="important-places">bandorban</li>
+                <li class="important-places">katabon</li>
+                <li>shalbon</li>
+            </ul>
+        </section>
+
+    </main>
+    <!-- type one to connect javascript -->
+    <script src="js/dom.js"></script>
+     <script src="js/styleInjs.js"></script>
+    <!-- type two ---connect with html its like kind of css-->
+    <script>
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+        for (let li of liCollection) {
+            // console.log(li.innerText);
+        }
+
+
+        //option-1: getElementsByTagName
+        const allHeadings = document.getElementsByTagName('h1');
+        for (const h1 of allHeadings) {
+            // console.log(h1.innerText)
+        }
+
+
+        // option-2: getElementsById //eta mara onek use korbo
+        const fruitsTitle = document.getElementById('fruits-title');
+        fruitsTitle.innerText = 'fruits changed by js';
+
+
+
+
+        // option-3:  getElementsByClassName //eta amra onek use korbo
+        const places = document.getElementsByClassName('important-places');
+        for (let place of places) {
+            // console.log(place.innerText);
+        }
+
+
+
+        // access from java script by using css selector
+
+
+        // option-4: querySelector  //eta amara use korbo onek
+        // querySelector by use this we will get first element only
+
+
+
+        // option-5:  querySelectorAll //etaw amra use korbo
+        const someLi = document.querySelectorAll('.fruits-container li');
+        // console.log(someLi);
+        for (const li of someLi) {
+            // console.log(li); 
+            // console.log(li.innerText);
+        }
+
+    </script>
+    <footer>
+
+    </footer>
+    
+</body>
+
+</html>
